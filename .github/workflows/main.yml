@@ -24,10 +24,10 @@ jobs:
             cd /home/ubuntu || exit 1
 
             if [ ! -d "cms-backend" ]; then
-              git clone https://github.com/FahimJamal07/cms-backend
+              git clone https://github.com/FahimJamal07/cms-backend.git
             fi
 
-            cd backend-sece-Aiml || exit 1
+            cd cms-backend || exit 1
             git pull origin master
 
             echo "MONGO_URI=${{ secrets.MONGO_URI }}" > .env
